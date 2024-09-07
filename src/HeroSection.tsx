@@ -14,9 +14,10 @@ interface ModelProps {
 
 function Model(props: ModelProps) {
   const group = useRef<THREE.Group>(null); // Use null as initial value for ref
+  const glbFile = 'https://safwan124.github.io/dealit/mac-draco.glb';
 
   // Load model
-  const { nodes, materials } = useGLTF('/mac-draco.glb');
+  const { nodes, materials } = useGLTF(glbFile);
 
   // Make it float
   useFrame((state) => {
