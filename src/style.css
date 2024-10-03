@@ -218,4 +218,11 @@ body, html {
     max-width: 100%;
     height: auto;
   }
+  .hero-section {
+    height: 300px;
+  }
+  .service-card {
+    width: 50%;
+    
+  }
 }
