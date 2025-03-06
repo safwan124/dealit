@@ -5,7 +5,8 @@ import * as THREE from 'three'
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, Environment, useGLTF, ContactShadows, OrbitControls } from '@react-three/drei'
-import Services from "./ServicesSection";
+import reactLogo from './assets/Deal IT Solutions.png';
+// import Services from "./ServicesSection";
 
 interface ModelProps {
   // Define more specific prop types if necessary
@@ -42,7 +43,13 @@ function Model(props: ModelProps) {
             {/* Drei's HTML component can "hide behind" canvas geometry */}
             <Html className="content" rotation-x={-Math.PI / 2} position={[0, 0.04, -0.1]} scale={0.3} transform occlude>
               <div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
-                <Services />
+                <img
+                  alt="Logo"
+                  src={reactLogo}
+                  width="450" // Adjust width if necessary
+                  height="auto"
+                  className="d-inline-block align-top"
+                />
               </div>
             </Html>
           </mesh>
@@ -61,7 +68,7 @@ function Model(props: ModelProps) {
 
 function Hero() {
   return (
-    <div className="hero-section">
+    <div className="hero-section mb-5">
       <NavBar />
       <Container className="hero-content">
         <Row className="align-items-center">
@@ -70,7 +77,7 @@ function Hero() {
             <p>Your trusted partner in driving innovation and growth.</p>
           </Col>
           <Col md={6} xs={12} className="text-left">
-            <Canvas style={{ width: '100%', height: '600px' }} camera={{ position: [-5, 0, -15], fov: 55 }}>
+            <Canvas style={{ width: '100%', height: '400px' }} camera={{ position: [-5, 0, -15], fov: 60 }}>
               <pointLight position={[10, 10, 10]} intensity={1.5} />
               <Suspense fallback={null}>
                 <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>

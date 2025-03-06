@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './style.css';
+import reactLogo from './assets/Deal IT Solutions.png';
 
 const Footer: React.FC = () => {
     return (
@@ -8,13 +9,18 @@ const Footer: React.FC = () => {
             <Container>
                 <Row>
                     <Col md={6} xs={12} className="mb-3">
-                        <h5>Deal IT Consulting Service</h5>
-                        <p>&copy; {new Date().getFullYear()} Deal IT Consulting Service. All Rights Reserved.</p>
+                        <h5><img
+                            alt="Logo"
+                            src={reactLogo}
+                            width="150"
+                            height="auto"
+                        /> &nbsp;</h5>
+                        <p>&copy; {new Date().getFullYear()} Deal IT Solutions. All Rights Reserved.</p>
                     </Col>
                     <Col md={3} xs={12} className="mb-3">
                         <h5>Contact Us</h5>
-                        <p>Email: info@dealitconsulting.com</p>
-                        <p>Phone: +123-456-7890</p>
+                        <p>Email: contact@dealitsolutions.com</p>
+                        <p>Phone: +91 99860 42912</p>
                     </Col>
                     <Col md={3} xs={12}>
                         <h5>Follow Us</h5>
@@ -30,8 +36,8 @@ const Footer: React.FC = () => {
                                 </a>
                             </li>
                             <li className="ms-3">
-                                <a href="https://www.twitter.com" className="text-white" target="_blank" rel="noopener noreferrer">
-                                    <i className="bi bi-twitter"></i> X
+                                <a href="https://www.linkedin.com" className="text-white" target="_blank" rel="noopener noreferrer">
+                                    <i className="bi bi-linkedin"></i> LinkedIn
                                 </a>
                             </li>
                         </ul>

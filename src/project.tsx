@@ -12,8 +12,10 @@ const Work: React.FC = () => {
                     <img src={workImg} alt="Project" className="img-fluid dgdProImg" />
                 </Col>
                 <Col md={6} xs={12}>
-                    <h3>CMS - Clinical Management System</h3>
-                    <p>Clinical management helps doctors streamline their treatment...</p>
+                    <h3 className='p-3'>CMS - Clinical Management System</h3>
+                    <p className='p-3'>Our Clinical Management System simplifies patient records, appointments, and billing, enhancing workflow efficiency.  
+                    Designed for doctors and healthcare providers, it ensures seamless coordination and improved patient care.  
+                    With automated reports and real-time data access, managing clinics has never been easier.</p>
                 </Col>
             </Row>
         </section>

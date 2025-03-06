@@ -63,6 +63,13 @@ body, html {
   .hero-content {
     display: flex;
     flex: 1;
+    background-color: black;
+  }
+
+  canvas {
+    width: 90% !important;
+    height: auto !important;
+    display: block;
   }
   
   .hero-text {
@@ -89,7 +96,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
   }
   
   .hero-img {
@@ -199,30 +206,56 @@ body, html {
   color: #ddd;
 }
 
+.navbar-toggler {
+  border-color: white !important;
+}
+.navbar-toggler-icon {
+  background-color: white !important; /* Changes the icon color */
+}
+
+/* Alternative: Use filter to make the default Bootstrap icon white */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
 /* Additional responsive styles */
 @media (max-width: 768px) {
   .hero-text h1 {
-    font-size: 36px;
+    margin-top: 2rem;
+    font-size: 32px;
   }
+
   .hero-text p {
-    font-size: 18px;
+    font-size: 12px;
   }
+
+  .navbar-toggler {
+    padding-right: 0%;
+    right: 15px;
+  }
+
   .navbar {
     flex-direction: column;
     text-align: center;
+    padding: 0.5rem;
   }
+
   .nav-menu {
     flex-direction: column;
   }
-  .hero-img {
+  /* .hero-img {
     max-width: 100%;
     height: auto;
-  }
+  } */
   .hero-section {
-    height: 300px;
+    height: auto;
   }
+
   .service-card {
-    width: 50%;
+    width: auto;
     
+  }
+  .companylogo {
+    width: 125px !important;
   }
 }
