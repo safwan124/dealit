@@ -14,7 +14,6 @@ function App() {
 
   return (
     <>
-      {/* <NavBar setActiveSection={setActiveSection} /> */}
       
       {activeSection === 'home' && (
         <>

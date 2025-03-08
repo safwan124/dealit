@@ -16,7 +16,7 @@ const NavBar: React.FC<NavBarProps> = ({ setActiveSection }) => {
   return (
     <Navbar expand="lg" className="navbar">
       <Container className="d-flex justify-content-between align-items-center">
-        <Navbar.Brand href="#" onClick={() => setActiveSection('home')}>
+        <Navbar.Brand onClick={() => setActiveSection('home')}>
           <img
             alt="Logo"
             src={reactLogo}
@@ -32,10 +32,10 @@ const NavBar: React.FC<NavBarProps> = ({ setActiveSection }) => {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#" onClick={() => setActiveSection('home')}>Home</Nav.Link>
-            <Nav.Link href="#" onClick={() => setActiveSection('services')}>Services</Nav.Link>
-            <Nav.Link href="#" onClick={() => setActiveSection('about')}>About</Nav.Link>
-            <Nav.Link href="#" onClick={() => setActiveSection('contact')}>Contact Us</Nav.Link>
+            <Nav.Link onClick={() => setActiveSection('home')}>Home</Nav.Link>
+            <Nav.Link onClick={() => setActiveSection('services')}>Services</Nav.Link>
+            <Nav.Link onClick={() => setActiveSection('about')}>About</Nav.Link>
+            <Nav.Link onClick={() => setActiveSection('contact')}>Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
