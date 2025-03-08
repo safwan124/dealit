@@ -5,7 +5,7 @@ import reactLogo from './assets/Deal IT Solutions.png';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="footer text-white py-4">
+        <footer className="footer text-white p-5">
             <Container>
                 <Row>
                     <Col md={6} xs={12} className="mb-3">

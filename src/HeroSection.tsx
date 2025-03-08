@@ -66,10 +66,15 @@ function Model(props: ModelProps) {
 }
 
 
-function Hero() {
+interface HeroProps {
+  setActiveSection: (section: string) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ setActiveSection }) => {
   return (
     <div className="hero-section mb-5">
-      <NavBar />
+      {/* ✅ Pass setActiveSection to NavBar */}
+      <NavBar setActiveSection={setActiveSection} />
       <Container className="hero-content">
         <Row className="align-items-center">
           <Col md={6} xs={12} className="hero-text text-center text-md-start">
