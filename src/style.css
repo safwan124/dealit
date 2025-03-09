@@ -1,4 +1,10 @@
 /* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -6,13 +12,12 @@ body, html {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
-  }
+    width: 100vw;
+    }
   
   .hero-section {
     background-color: black;
     color: white;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
   }
@@ -28,6 +33,8 @@ body, html {
     align-items: center;
     z-index: 1000;
     padding: 10px 20px;
+    background-color: black;
+    width: 100vw;
   }
 
   .navbar .nav-link {
@@ -252,8 +259,10 @@ body, html {
   }
 
   .service-card {
-    width: auto;
-    
+    width: auto; 
+  }
+  .service-card p {
+    font-size: small;
   }
   .companylogo {
     width: 125px !important;

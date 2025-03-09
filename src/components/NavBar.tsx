@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -5,18 +6,13 @@ import reactLogo from '../assets/Deal IT Solutions.png';
 import '../style.css';
 import { useState } from 'react';
 
-type NavBarProps = {
-  setActiveSection: (section: string) => void;
-};
-
-const NavBar: React.FC<NavBarProps> = ({ setActiveSection }) => {
-
+const NavBar: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <Navbar expand="lg" className="navbar">
       <Container className="d-flex justify-content-between align-items-center">
-        <Navbar.Brand onClick={() => setActiveSection('home')}>
+        <Navbar.Brand as={Link} to="/" onClick={() => setExpanded(false)}>
           <img
             alt="Logo"
             src={reactLogo}
@@ -32,15 +28,15 @@ const NavBar: React.FC<NavBarProps> = ({ setActiveSection }) => {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link onClick={() => setActiveSection('home')}>Home</Nav.Link>
-            <Nav.Link onClick={() => setActiveSection('services')}>Services</Nav.Link>
-            <Nav.Link onClick={() => setActiveSection('about')}>About</Nav.Link>
-            <Nav.Link onClick={() => setActiveSection('contact')}>Contact Us</Nav.Link>
+            <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/services" onClick={() => setExpanded(false)}>Services</Nav.Link>
+            <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)}>About</Nav.Link>
+            <Nav.Link as={Link} to="/contact" onClick={() => setExpanded(false)}>Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavBar;

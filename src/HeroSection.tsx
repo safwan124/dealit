@@ -1,4 +1,3 @@
-import NavBar from "./components/NavBar";
 import './style.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import * as THREE from 'three'
@@ -65,16 +64,9 @@ function Model(props: ModelProps) {
   );
 }
 
-
-interface HeroProps {
-  setActiveSection: (section: string) => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ setActiveSection }) => {
+const Hero: React.FC = () => {
   return (
     <div className="hero-section mb-5">
-      {/* ✅ Pass setActiveSection to NavBar */}
-      <NavBar setActiveSection={setActiveSection} />
       <Container className="hero-content">
         <Row className="align-items-center">
           <Col md={6} xs={12} className="hero-text text-center text-md-start">
